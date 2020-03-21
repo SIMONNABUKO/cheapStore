@@ -11,7 +11,7 @@ class Modal extends Component {
         {value => {
           const { modalOpen, closeModal } = value;
           const { img, title, price } = value.modalProduct;
-          console.log(value);
+
           if (!modalOpen) {
             return null;
           } else {
@@ -29,7 +29,7 @@ class Modal extends Component {
                       <h5 className='text-muted'>price: Kshs: {price}</h5>
                       <Link to='/'>
                         <ButtonContainer onClick={() => closeModal()}>
-                          continue shopping
+                          store
                         </ButtonContainer>
                       </Link>
                       <Link to='/cart'>
