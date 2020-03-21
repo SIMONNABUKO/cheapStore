@@ -15,9 +15,7 @@ class Details extends Component {
             company,
             price,
             inCart,
-            info,
-            count,
-            total
+            info
           } = value.detailProduct;
           return (
             <div className='container py-5'>
@@ -59,6 +57,7 @@ class Details extends Component {
                       disabled={inCart ? true : false}
                       onClick={() => {
                         value.addToCart(id);
+                        value.openModal(id);
                       }}
                     >
                       {inCart ? ' in cart' : 'add to cart'}
