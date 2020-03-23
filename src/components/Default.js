@@ -3,8 +3,21 @@ import React, { Component } from 'react';
 class Default extends Component {
   render() {
     return (
-      <div>
-        <h2>Ooops! Page not found</h2>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-10 mx-auto text-title pt-5 text-uppercase'>
+            <h1>404</h1>
+            <h1>error!</h1>
+            <h2>page not found</h2>
+            <h3>
+              the requested URL:{' '}
+              <span className='text-danger'>
+                {this.props.location.pathname}
+              </span>{' '}
+              was not found
+            </h3>
+          </div>
+        </div>
       </div>
     );
   }
